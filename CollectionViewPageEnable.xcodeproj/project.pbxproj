@@ -15,6 +15,7 @@
 		1A262A42210DB93A0042FA1A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A262A41210DB93A0042FA1A /* main.m */; };
 		1A262A4C210DB93A0042FA1A /* CollectionViewPageEnableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A262A4B210DB93A0042FA1A /* CollectionViewPageEnableTests.m */; };
 		1A262A57210DB93A0042FA1A /* CollectionViewPageEnableUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A262A56210DB93A0042FA1A /* CollectionViewPageEnableUITests.m */; };
+		1A262A66210DB97F0042FA1A /* TMSCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A262A65210DB97F0042FA1A /* TMSCollectionViewFlowLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		1A262A52210DB93A0042FA1A /* CollectionViewPageEnableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionViewPageEnableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A262A56210DB93A0042FA1A /* CollectionViewPageEnableUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewPageEnableUITests.m; sourceTree = "<group>"; };
 		1A262A58210DB93A0042FA1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A262A64210DB97F0042FA1A /* TMSCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMSCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		1A262A65210DB97F0042FA1A /* TMSCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMSCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				1A262A33210DB93A0042FA1A /* AppDelegate.m */,
 				1A262A35210DB93A0042FA1A /* ViewController.h */,
 				1A262A36210DB93A0042FA1A /* ViewController.m */,
+				1A262A64210DB97F0042FA1A /* TMSCollectionViewFlowLayout.h */,
+				1A262A65210DB97F0042FA1A /* TMSCollectionViewFlowLayout.m */,
 				1A262A38210DB93A0042FA1A /* Main.storyboard */,
 				1A262A3B210DB93A0042FA1A /* Assets.xcassets */,
 				1A262A3D210DB93A0042FA1A /* LaunchScreen.storyboard */,
@@ -266,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A262A37210DB93A0042FA1A /* ViewController.m in Sources */,
+				1A262A66210DB97F0042FA1A /* TMSCollectionViewFlowLayout.m in Sources */,
 				1A262A42210DB93A0042FA1A /* main.m in Sources */,
 				1A262A34210DB93A0042FA1A /* AppDelegate.m in Sources */,
 			);
@@ -433,6 +439,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GDW8EW5B9D;
 				INFOPLIST_FILE = CollectionViewPageEnable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TMS.CollectionViewPageEnable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -447,6 +454,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GDW8EW5B9D;
 				INFOPLIST_FILE = CollectionViewPageEnable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TMS.CollectionViewPageEnable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
