@@ -8,6 +8,10 @@
 
 #import "TMSCollectionViewFlowLayout.h"
 
+@interface TMSCollectionViewFlowLayout ()
+@property(nonatomic, assign) CGFloat lastProposedContentOffset;
+@end
+
 @implementation TMSCollectionViewFlowLayout
 
 
@@ -56,7 +60,22 @@
     }
     
     //3. 补回ContentOffset，则正好将Item居中显示
-    return CGPointMake(proposedContentOffset.x + minCenterX, proposedContentOffset.y);
+    CGFloat proposedX = proposedContentOffset.x + minCenterX;
+    // 滑动一屏时的偏移量
+    CGFloat mainScreenBounds = [UIScreen mainScreen].bounds.size.width + 10;
+    // 正向滑动仅滑动一屏
+    if (proposedX - self.lastProposedContentOffset >= mainScreenBounds) {
+        proposedX = mainScreenBounds + self.lastProposedContentOffset;
+    }
+    // 反向滑动仅滑动一屏
+    if (proposedX - self.lastProposedContentOffset <= -mainScreenBounds) {
+        proposedX = -mainScreenBounds + self.lastProposedContentOffset;
+    }
+    
+    self.lastProposedContentOffset = proposedX;
+    
+    CGPoint finialProposedContentOffset = CGPointMake(proposedX, proposedContentOffset.y);
+    return finialProposedContentOffset;
 }
 
 @end
